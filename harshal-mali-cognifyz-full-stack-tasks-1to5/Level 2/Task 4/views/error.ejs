@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Error</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="container col-md-7 mt-4 shadow-lg p-3 mb-5 bg-white rounded">
+			<div class="row">
+				<div class="col-md">
+					<div class="alert alert-danger" role="alert">
+						<h4 class="alert-heading">Error</h4>
+						<p>An error occurred while processing your request.</p>
+						<hr />
+						<p><%= message %></p>
+
+						<% if (!message) { %>
+						<p class="mb-0">
+							Password should be between 4 and 8 characters, including at least one digit, one uppercase
+							letter, one lowercase letter, and one of the special characters (@, #, or -).
+						</p>
+						<% } %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
